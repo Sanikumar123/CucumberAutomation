@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		
 		features = "src/test/java/features",
-		glue="stepdefinitions" ,dryRun=false,monochrome=true,
+		glue="stepdefinitions" ,dryRun=true,monochrome=false,
 		plugin= {"pretty","html:target/cucmber.html"})
 
 public class Runner extends AbstractTestNGCucumberTests {
