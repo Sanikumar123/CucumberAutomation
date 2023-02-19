@@ -34,5 +34,11 @@ public class PageObjectManager {
 		WishlistPage wishlistpage = new WishlistPage(driver);
 		return wishlistpage;
 	}
+	
+	public AddToCartpage addToCartpage()
+	{
+		AddToCartpage addToCartpage = new AddToCartpage(driver);
+		return addToCartpage;
+	}
 
 }

@@ -60,6 +60,8 @@ TestContextSetup testContextSetup;
 			e.printStackTrace();
 		}
 		
+		
+		
 	}
 	@When("selects size and color")
 	public void selects_size_and_color() {
@@ -71,13 +73,39 @@ TestContextSetup testContextSetup;
 	public void clicks_on_heart_symbol() {
 	   
 		homePage.clickWishListbtn();
-		try {
+		/*try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
+	
+	 @When("^selects the product and Clicks on Add to Cart button$")
+	    public void selects_the_product_and_clicks_on_add_to_cart_button()  {
+		 
+		 testContextSetup.expectedProductAdded = homePage.selectProduct();
+		 homePage.clickAddToCartbtn();
+		 
+		 homePage.clickAddToCartIcon();
+		/* try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		 
+		 homePage.clickProceedToCheckoutBtn();
+		 
+		/* try {
+				Thread.sleep(15000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		*/	
+	        
+	    }
 	
 	
 	

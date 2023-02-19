@@ -5,13 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class WishlistPage {
+public class WishlistPage extends Actionspage {
 	
 	
 WebDriver driver;
 	
 	public WishlistPage(WebDriver driver)
 	{
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	

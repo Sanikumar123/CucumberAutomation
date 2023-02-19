@@ -24,5 +24,11 @@ Feature: Validate Luma Application Loginpage
     And Clicks on Heart symbol
     Then Wishlist page opens and displays same added shirt
 
+  Scenario: Validate User able to order a product added in the Cart successfully
+    Given User searches product "shirt" in the search bar
+    When selects the product and Clicks on Add to Cart button
+    Then product is added to the Cart and can be order successfully
+
+  
   Scenario: Validate Homepage lands after login with correct credential
     Then Applicaiton Homepage opens and displays message as "This is a demo store. No orders will be fulfilled."
